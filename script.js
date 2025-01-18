@@ -54,8 +54,10 @@ function sendEmailNotification(animalName, recordType, recordDate, details) {
     emailjs.send("service_s81t1xq", "template_ub4i2qm", templateParams)
         .then(() => {
             console.log("Email sent successfully!");
+            alert("Email sent successfully!");
         })
         .catch(error => {
             console.error("Error sending email:", error);
+            alert("Failed to send email. Please check the console for details.");
         });
 }
